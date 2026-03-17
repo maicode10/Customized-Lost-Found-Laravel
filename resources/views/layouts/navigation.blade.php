@@ -28,6 +28,21 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    {{-- NEW: Items Link --}}
+                    <x-nav-link :href="route('items.index')" :active="request()->routeIs('items.*')">
+                        {{ __('Items') }}
+                    </x-nav-link>
+
+                    {{-- NEW: Claims Link --}}
+                    <x-nav-link :href="route('claims.index')" :active="request()->routeIs('claims.*')">
+                        {{ __('Claims') }}
+                    </x-nav-link>
+
+                    {{-- NEW: Categories Link --}}
+                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
+                        {{ __('Categories') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -87,6 +102,21 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+
+            {{-- NEW: Items Link (Mobile) --}}
+            <x-responsive-nav-link :href="route('items.index')" :active="request()->routeIs('items.*')">
+                {{ __('Items') }}
+            </x-responsive-nav-link>
+
+            {{-- NEW: Claims Link (Mobile) --}}
+            <x-responsive-nav-link :href="route('claims.index')" :active="request()->routeIs('claims.*')">
+                {{ __('Claims') }}
+            </x-responsive-nav-link>
+
+            {{-- NEW: Categories Link (Mobile) --}}
+            <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
+                {{ __('Categories') }}
             </x-responsive-nav-link>
         </div>
 
